@@ -1,4 +1,4 @@
-﻿Sample,Original.label,Treatment,Time post-transplant (weeks),WBC,RBC,HGB,HCT,MCV,MCH,MCHC,PLT,MPV,RDW,% Lym,% Mon,% Gra,# Lym,# Mon,# Gra,GFP
+﻿Sample,Original.label,Treatment,Time post-transplant (weeks),WBC,RBC,HGB,HCT,MCV,MCH,MCHC,PLT,MPV,RDW,Percent.Lym,Percent.Mon,Percent.Gra,Number.Lym,Number.Mon,Number.Gra,GFP
 MIG.1,BMT1.MIG (NEP cage 1/2),control,5,5.2,9.57,14.7,45.7,48,15.4,32.2,473,6.8,15.7,NA,NA,NA,2.3,0.3,2.6,85.2
 MIG.2,BMT1.MIG (REP cage 1/2),control,5,3.6,9.37,14.3,43,46,15.3,33.3,605,6.5,15.5,NA,NA,NA,2.1,0.3,1.2,86.8
 MIG.3,BMT1.MIG (BEP cage 2/2),control,5,6.5,9.58,14.6,44.4,46,15.3,32.9,453,6.7,15.3,NA,NA,NA,3,0.5,3,88.7

@@ -11,7 +11,15 @@ output:
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-``` {r library}
+``` {r library, message = F}
 library(tidyverse)
 library(dplyr)
 ```
+
+``` {r data}
+metadata <- read.csv("F:/Git/PLac Analyses/miR-532 project/miR532_BMT/Data/200412_MetaData.csv")
+JL_data <- read.csv("F:/Git/PLac Analyses/miR-532 project/miR532_BMT/Data/200412_JL_Data.csv")
+MB_data <- read.csv("F:/Git/PLac Analyses/miR-532 project/miR532_BMT/Data/200412_MB_Data.csv")
+PL_data <- read.csv("F:/Git/PLac Analyses/miR-532 project/miR532_BMT/Data/200412_PL_Data.csv")
+```
+

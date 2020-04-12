@@ -1,4 +1,4 @@
-﻿Sample,Original.label,Treatment,Time post-transplant (weeks),WBC,RBC,HGB,HCT,MCV,MCH,MCHC,PLT,MPV,RDW,% Lym,% Mon,% Gra,# Lym,# Mon,# Gra,GFP
+﻿Sample,Original.label,Treatment,Time post-transplant (weeks),WBC,RBC,HGB,HCT,MCV,MCH,MCHC,PLT,MPV,RDW,Percent.Lym,Percent.Mon,Percent.Gra,Number.Lym,Number.Mon,Number.Gra,GFP
 MIG.12,MB_miR BMT_MIG_1,control,9,4.3,11.8,15.9,53.3,45,13.4,29.7,661,6.4,14.9,67.3,9.6,23.1,2.9,0.4,1,NA
 MIG.13,MB_miR BMT_MIG_2,control,9,6.5,12.34,16.4,55.3,45,13.3,29.6,581,6.7,14.6,66,9.2,24.8,4.3,0.6,1.6,NA
 MIG.14,MB_miR BMT_MIG_3,control,9,2.4,6.37,8.5,27.9,44,13.3,30.4,191,7.8,15.8,69.9,7.1,23,1.6,0.1,0.7,NA

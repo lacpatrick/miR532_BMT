@@ -15,6 +15,7 @@ knitr::opts_chunk$set(echo = TRUE)
 library(tidyverse)
 library(dplyr)
 library(ggplot2)
+library(ggpubr)
 ```
 
 Let's begin by importing our data:
@@ -54,13 +55,23 @@ dim(Week5)
 Let's make a dot plot for WBC count:
 ``` {r WBC}
 WBC <- ggplot(Week5, aes(x=Treatment, y=WBC, fill=Treatment)) +
+  #Add standard deviation bars
   stat_summary(fun.data=mean_sdl, fun.args=list(mult=1), binwidth = 0.1, geom="errorbar", color="red", size=1.2, width=0.1) +
+  #Add mean bar
   stat_summary(fun.y=mean, geom="crossbar", color="red", size=0.6, width=0.2) +
+  #Add dot-plot
   geom_dotplot(binaxis="y", binwidth = 0.1, stackdir="center", stackratio=3, dotsize=3) + 
+  #Set y-axis scale
   ylim(0, 12) +
+  #Change to minimalistic theme
+  theme_minimal() +
+  #Change Graph and axis titles
   labs(title = "WBC", x = "Treatment", y = "WBC (10"^"3"*"/"~mu~"L)") +
   theme(plot.title = element_text(hjust=0.5), text=element_text(size=18)) +
-  scale_fill_discrete(name="Treatment", labels = c("control (n=20)", "miR-532 (n=28)"))
+  #Changing legend titles
+  scale_fill_discrete(name="Treatment", labels = c("control (n=20)", "miR-532 (n=28)")) +
+  #perform t-test
+  stat_compare_means(method="t.test", hjust=-0.2, vjust=2, size=5)
 
 WBC
 ```

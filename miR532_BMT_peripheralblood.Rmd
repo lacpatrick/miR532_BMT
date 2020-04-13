@@ -16,6 +16,8 @@ library(tidyverse)
 library(dplyr)
 library(ggplot2)
 library(ggpubr)
+library(cowplot)
+library(gridExtra)
 ```
 
 Let's begin by importing our data:
@@ -73,7 +75,8 @@ wk5.WBC <- ggplot(Week5, aes(x=Treatment, y=WBC, fill=Treatment)) +
   #Changing legend titles
   scale_fill_discrete(name="Treatment", labels = c("control (n=20)", "miR-532 (n=28)")) +
   #perform t-test
-  stat_compare_means(method="t.test", hjust=-0.2, vjust=2, size=5)
+  stat_compare_means(method="t.test", hjust=-0.5, vjust=2, size=5) +
+  theme(legend.position="bottom")
 wk5.WBC
 ```
 
@@ -328,3 +331,5 @@ wk5.Number.Gra <- ggplot(Week5, aes(x=Treatment, y=Number.Gra, fill=Treatment)) 
   theme(legend.position="none")
 wk5.Number.Gra
 ```
+
+

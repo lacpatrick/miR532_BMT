@@ -67,8 +67,6 @@ wk5.WBC <- ggplot(Week5, aes(x=Treatment, y=WBC, fill=Treatment)) +
   geom_dotplot(binaxis="y", binwidth = 0.1, stackdir="center", stackratio=2, dotsize=3) + 
   #Set y-axis scale
   ylim(0, 12) +
-  #Change to minimalistic theme
-  theme_minimal() +
   #Change Graph and axis titles
   labs(title = "White blood cells", x = "Treatment", y = "WBC (10"^"3"*"/"~mu~"L)") +
   theme(plot.title = element_text(hjust=0.5), text=element_text(size=18)) +
@@ -88,7 +86,6 @@ wk5.RBC <- ggplot(Week5, aes(x=Treatment, y=RBC, fill=Treatment)) +
   stat_summary(fun.y=mean, geom="crossbar", color="black", size=0.6, width=0.2) +
   geom_dotplot(binaxis="y", binwidth = 0.1, stackdir="center", stackratio=2, dotsize=3.5) + 
   ylim(0, 15) +
-  theme_minimal() +
   labs(title = "Red blood cells", x = "Treatment", y = "RBC (10"^"6"*"/"~mu~"L)") +
   theme(plot.title = element_text(hjust=0.5), text=element_text(size=18)) +
   scale_fill_discrete(name="Treatment", labels = c("control (n=20)", "miR-532 (n=28)")) +
@@ -105,7 +102,6 @@ wk5.HGB <- ggplot(Week5, aes(x=Treatment, y=HGB, fill=Treatment)) +
   stat_summary(fun.y=mean, geom="crossbar", color="black", size=0.6, width=0.2) +
   geom_dotplot(binaxis="y", binwidth = 0.1, stackdir="center", stackratio=3.5, dotsize=5) + 
   ylim(0, 20) +
-  theme_minimal() +
   labs(title = "Hemoglobin", x = "Treatment", y = "HGB (g/dL)") +
   theme(plot.title = element_text(hjust=0.5), text=element_text(size=18)) +
   scale_fill_discrete(name="Treatment", labels = c("control (n=20)", "miR-532 (n=28)")) +
@@ -122,7 +118,6 @@ wk5.HCT <- ggplot(Week5, aes(x=Treatment, y=HCT, fill=Treatment)) +
   stat_summary(fun.y=mean, geom="crossbar", color="black", size=0.6, width=0.2) +
   geom_dotplot(binaxis="y", binwidth = 1, stackdir="center", stackratio=1.8, dotsize=2) + 
   ylim(0, 80) +
-  theme_minimal() +
   labs(title = "Hematocrit", x = "Treatment", y = "HCT (%)") +
   theme(plot.title = element_text(hjust=0.5), text=element_text(size=18)) +
   scale_fill_discrete(name="Treatment", labels = c("control (n=20)", "miR-532 (n=28)")) +
@@ -139,7 +134,6 @@ wk5.PLT <- ggplot(Week5, aes(x=Treatment, y=PLT, fill=Treatment)) +
   stat_summary(fun.y=mean, geom="crossbar", color="black", size=0.6, width=0.2) +
   geom_dotplot(binaxis="y", binwidth = 1, stackdir="center", stackratio=5, dotsize=30) + 
   ylim(0, 1250) +
-  theme_minimal() +
   labs(title = "Platelets", x = "Treatment", y = "PLT (10"^"3"*"/"~mu~"L)") +
   theme(plot.title = element_text(hjust=0.5), text=element_text(size=18)) +
   scale_fill_discrete(name="Treatment", labels = c("control (n=20)", "miR-532 (n=28)")) +
@@ -156,7 +150,6 @@ wk5.MCV <- ggplot(Week5, aes(x=Treatment, y=MCV, fill=Treatment)) +
   stat_summary(fun.y=mean, geom="crossbar", color="black", size=0.6, width=0.2) +
   geom_dotplot(binaxis="y", binwidth = 1, stackdir="center", stackratio=1.5, dotsize=1.5) + 
   ylim(0, 60) +
-  theme_minimal() +
   labs(title = "Mean corpuscular volume", x = "Treatment", y = "MCV ("~mu~"m"^"3"*")") +
   theme(plot.title = element_text(hjust=0.5), text=element_text(size=18)) +
   scale_fill_discrete(name="Treatment", labels = c("control (n=20)", "miR-532 (n=28)")) +
@@ -173,7 +166,6 @@ wk5.MCH <- ggplot(Week5, aes(x=Treatment, y=MCH, fill=Treatment)) +
   stat_summary(fun.y=mean, geom="crossbar", color="black", size=0.6, width=0.2) +
   geom_dotplot(binaxis="y", binwidth = 0.1, stackdir="center", stackratio=2.5, dotsize=5) + 
   ylim(0, 20) +
-  theme_minimal() +
   labs(title = "Mean corpuscular hemoglobin", x = "Treatment", y = "MCH (pg)") +
   theme(plot.title = element_text(hjust=0.5), text=element_text(size=18)) +
   scale_fill_discrete(name="Treatment", labels = c("control (n=20)", "miR-532 (n=28)")) +
@@ -190,7 +182,6 @@ wk5.MCHC <- ggplot(Week5, aes(x=Treatment, y=MCHC, fill=Treatment)) +
   stat_summary(fun.y=mean, geom="crossbar", color="black", size=0.6, width=0.2) +
   geom_dotplot(binaxis="y", binwidth = 0.1, stackdir="center", stackratio=3, dotsize=10) + 
   ylim(0, 40) +
-  theme_minimal() +
   labs(title = "Mean corpuscular hemoglobin concentration", x = "Treatment", y = "MCHC (g/dl)") +
   theme(plot.title = element_text(hjust=0.5), text=element_text(size=18)) +
   scale_fill_discrete(name="Treatment", labels = c("control (n=20)", "miR-532 (n=28)")) +
@@ -207,7 +198,6 @@ wk5.RDW <- ggplot(Week5, aes(x=Treatment, y=RDW, fill=Treatment)) +
   stat_summary(fun.y=mean, geom="crossbar", color="black", size=0.6, width=0.2) +
   geom_dotplot(binaxis="y", binwidth = 0.1, stackdir="center", stackratio=2.5, dotsize=5) + 
   ylim(0, 20) +
-  theme_minimal() +
   labs(title = "RBC distribution width", x = "Treatment", y = "RDW (%)") +
   theme(plot.title = element_text(hjust=0.5), text=element_text(size=18)) +
   scale_fill_discrete(name="Treatment", labels = c("control (n=20)", "miR-532 (n=28)")) +
@@ -224,7 +214,6 @@ wk5.MPV <- ggplot(Week5, aes(x=Treatment, y=MPV, fill=Treatment)) +
   stat_summary(fun.y=mean, geom="crossbar", color="black", size=0.6, width=0.2) +
   geom_dotplot(binaxis="y", binwidth = 0.1, stackdir="center", stackratio=2, dotsize=2.5) + 
   ylim(0, 10) +
-  theme_minimal() +
   labs(title = "Mean platelet volume", x = "Treatment", y = "MPV ("~mu~"m"^"3"*")") +
   theme(plot.title = element_text(hjust=0.5), text=element_text(size=18)) +
   scale_fill_discrete(name="Treatment", labels = c("control (n=20)", "miR-532 (n=28)")) +
@@ -241,7 +230,6 @@ wk5.Percent.Lym <- ggplot(Week5, aes(x=Treatment, y=Percent.Lym, fill=Treatment)
   stat_summary(fun.y=mean, geom="crossbar", color="black", size=0.6, width=0.2) +
   geom_dotplot(binaxis="y", binwidth = 1, stackdir="center", stackratio=2, dotsize=2) + 
   ylim(0, 80) +
-  theme_minimal() +
   labs(title = "Lymphocyte frequency", x = "Treatment", y = "Lym (%)") +
   theme(plot.title = element_text(hjust=0.5), text=element_text(size=18)) +
   scale_fill_discrete(name="Treatment", labels = c("control (n=9)", "miR-532 (n=12)")) +
@@ -257,7 +245,6 @@ wk5.Percent.Mon <- ggplot(Week5, aes(x=Treatment, y=Percent.Mon, fill=Treatment)
   stat_summary(fun.y=mean, geom="crossbar", color="black", size=0.6, width=0.2) +
   geom_dotplot(binaxis="y", binwidth = .1, stackdir="center", stackratio=2, dotsize=5) + 
   ylim(0, 20) +
-  theme_minimal() +
   labs(title = "Monocyte frequency", x = "Treatment", y = "Mon (%)") +
   theme(plot.title = element_text(hjust=0.5), text=element_text(size=18)) +
   scale_fill_discrete(name="Treatment", labels = c("control (n=9)", "miR-532 (n=12)")) +
@@ -273,7 +260,6 @@ wk5.Percent.Gra <- ggplot(Week5, aes(x=Treatment, y=Percent.Gra, fill=Treatment)
   stat_summary(fun.y=mean, geom="crossbar", color="black", size=0.6, width=0.2) +
   geom_dotplot(binaxis="y", binwidth = 0.1, stackdir="center", stackratio=2, dotsize=20) + 
   ylim(0, 80) +
-  theme_minimal() +
   labs(title = "Granulocyte frequency", x = "Treatment", y = "Gra (%)") +
   theme(plot.title = element_text(hjust=0.5), text=element_text(size=18)) +
   scale_fill_discrete(name="Treatment", labels = c("control (n=9)", "miR-532 (n=12)")) +
@@ -289,7 +275,6 @@ wk5.Number.Lym <- ggplot(Week5, aes(x=Treatment, y=Number.Lym, fill=Treatment)) 
   stat_summary(fun.y=mean, geom="crossbar", color="black", size=0.6, width=0.2) +
   geom_dotplot(binaxis="y", binwidth = 0.05, stackdir="center", stackratio=3, dotsize=4) + 
   ylim(0, 8) +
-  theme_minimal() +
   labs(title = "Lymphocyte count", x = "Treatment", y = "Lym (10"^"3"*"/"~mu~"L)") +
   theme(plot.title = element_text(hjust=0.5), text=element_text(size=18)) +
   scale_fill_discrete(name="Treatment", labels = c("control (n=20)", "miR-532 (n=28)")) +
@@ -306,7 +291,6 @@ wk5.Number.Mon <- ggplot(Week5, aes(x=Treatment, y=Number.Mon, fill=Treatment)) 
   stat_summary(fun.y=mean, geom="crossbar", color="black", size=0.6, width=0.2) +
   geom_dotplot(binaxis="y", binwidth = 0.05, stackdir="center", stackratio=1.2, dotsize=0.7) + 
   ylim(0, 1.5) +
-  theme_minimal() +
   labs(title = "Monocyte count", x = "Treatment", y = "Mon (10"^"3"*"/"~mu~"L)") +
   theme(plot.title = element_text(hjust=0.5), text=element_text(size=18)) +
   scale_fill_discrete(name="Treatment", labels = c("control (n=20)", "miR-532 (n=28)")) +
@@ -323,7 +307,6 @@ wk5.Number.Gra <- ggplot(Week5, aes(x=Treatment, y=Number.Gra, fill=Treatment)) 
   stat_summary(fun.y=mean, geom="crossbar", color="black", size=0.6, width=0.2) +
   geom_dotplot(binaxis="y", binwidth = 0.1, stackdir="center", stackratio=2, dotsize=2) + 
   ylim(0, 8) +
-  theme_minimal() +
   labs(title = "Granulocyte count", x = "Treatment", y = "Gra (10"^"3"*"/"~mu~"L)") +
   theme(plot.title = element_text(hjust=0.5), text=element_text(size=18)) +
   scale_fill_discrete(name="Treatment", labels = c("control (n=20)", "miR-532 (n=28)")) +
@@ -332,4 +315,15 @@ wk5.Number.Gra <- ggplot(Week5, aes(x=Treatment, y=Number.Gra, fill=Treatment)) 
 wk5.Number.Gra
 ```
 
+### Now let's arrange the plots:
+```{r arrange.plots}
+ggarrange(wk5.WBC, wk5.RBC, wk5.HGB, wk5.HCT, wk5.PLT, wk5.MCV, wk5.MCH, wk5.MCHC, wk5.RDW, wk5.MPV,
+          labels = c("A", "B", "C", "D", "E", "F", "G", "H", "I", "J"),
+          ncol=2, nrow=2)
+         
+          
+```     
+
+  
+          
 

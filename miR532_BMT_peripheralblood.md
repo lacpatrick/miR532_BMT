@@ -64,12 +64,61 @@ Let's make dotplots for our CBC counts:
 ![](miR532_BMT_peripheralblood_files/figure-html/wk5.WBC-1.png)<!-- -->
 
 
+
 ![](miR532_BMT_peripheralblood_files/figure-html/wk5.RBC-1.png)<!-- -->
+
 
 
 ![](miR532_BMT_peripheralblood_files/figure-html/wk5.HGB-1.png)<!-- -->
 
 
+
 ![](miR532_BMT_peripheralblood_files/figure-html/wk5.HCT-1.png)<!-- -->
 
+
+
 ![](miR532_BMT_peripheralblood_files/figure-html/wk5.PLT-1.png)<!-- -->
+
+
+
+![](miR532_BMT_peripheralblood_files/figure-html/wk5.MCV-1.png)<!-- -->
+
+
+
+![](miR532_BMT_peripheralblood_files/figure-html/wk5.MCH-1.png)<!-- -->
+
+
+
+![](miR532_BMT_peripheralblood_files/figure-html/wk5.MCHC-1.png)<!-- -->
+
+
+
+![](miR532_BMT_peripheralblood_files/figure-html/wk5.RDW-1.png)<!-- -->
+
+
+
+![](miR532_BMT_peripheralblood_files/figure-html/wk5.MPV-1.png)<!-- -->
+
+
+
+![](miR532_BMT_peripheralblood_files/figure-html/wk5.Percent.Lym-1.png)<!-- -->
+
+
+
+![](miR532_BMT_peripheralblood_files/figure-html/wk5.Percent.Mon-1.png)<!-- -->
+
+
+
+![](miR532_BMT_peripheralblood_files/figure-html/wk5.Percent.Gra-1.png)<!-- -->
+
+
+
+![](miR532_BMT_peripheralblood_files/figure-html/wk5.Number.Lym-1.png)<!-- -->
+
+
+
+![](miR532_BMT_peripheralblood_files/figure-html/wk5.Number.Mon-1.png)<!-- -->
+
+
+
+![](miR532_BMT_peripheralblood_files/figure-html/wk5.Number.Gra-1.png)<!-- -->

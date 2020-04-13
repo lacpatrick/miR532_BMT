@@ -78,6 +78,7 @@ wk5.WBC
 ```
 
 
+
 ```{r wk5.RBC}
 wk5.RBC <- ggplot(Week5, aes(x=Treatment, y=RBC, fill=Treatment)) +
   stat_summary(fun.data=mean_sdl, fun.args=list(mult=1), binwidth = 0.1, geom="errorbar", color="black", size=1.2, width=0.1) +
@@ -92,6 +93,7 @@ wk5.RBC <- ggplot(Week5, aes(x=Treatment, y=RBC, fill=Treatment)) +
   theme(legend.position="none")
 wk5.RBC
 ```
+
 
 
 ```{r wk5.HGB}
@@ -110,6 +112,7 @@ wk5.HGB
 ```
 
 
+
 ```{r wk5.HCT}
 wk5.HCT <- ggplot(Week5, aes(x=Treatment, y=HCT, fill=Treatment)) +
   stat_summary(fun.data=mean_sdl, fun.args=list(mult=1), binwidth = 1, geom="errorbar", color="black", size=1.2, width=0.1) +
@@ -124,6 +127,8 @@ wk5.HCT <- ggplot(Week5, aes(x=Treatment, y=HCT, fill=Treatment)) +
   theme(legend.position="none")
 wk5.HCT
 ```
+
+
 
 ```{r wk5.PLT}
 wk5.PLT <- ggplot(Week5, aes(x=Treatment, y=PLT, fill=Treatment)) +
@@ -140,6 +145,8 @@ wk5.PLT <- ggplot(Week5, aes(x=Treatment, y=PLT, fill=Treatment)) +
 wk5.PLT
 ```
 
+
+
 ```{r wk5.MCV}
 wk5.MCV <- ggplot(Week5, aes(x=Treatment, y=MCV, fill=Treatment)) +
   stat_summary(fun.data=mean_sdl, fun.args=list(mult=1), binwidth = 1, geom="errorbar", color="black", size=1.2, width=0.1) +
@@ -154,6 +161,8 @@ wk5.MCV <- ggplot(Week5, aes(x=Treatment, y=MCV, fill=Treatment)) +
   theme(legend.position="none")
 wk5.MCV
 ```
+
+
 
 ```{r wk5.MCH}
 wk5.MCH <- ggplot(Week5, aes(x=Treatment, y=MCH, fill=Treatment)) +
@@ -170,6 +179,8 @@ wk5.MCH <- ggplot(Week5, aes(x=Treatment, y=MCH, fill=Treatment)) +
 wk5.MCH
 ```
 
+
+
 ```{r wk5.MCHC}
 wk5.MCHC <- ggplot(Week5, aes(x=Treatment, y=MCHC, fill=Treatment)) +
   stat_summary(fun.data=mean_sdl, fun.args=list(mult=1), binwidth = 0.1, geom="errorbar", color="black", size=1.2, width=0.1) +
@@ -184,6 +195,8 @@ wk5.MCHC <- ggplot(Week5, aes(x=Treatment, y=MCHC, fill=Treatment)) +
   theme(legend.position="none")
 wk5.MCHC
 ```
+
+
 
 ```{r wk5.RDW}
 wk5.RDW <- ggplot(Week5, aes(x=Treatment, y=RDW, fill=Treatment)) +
@@ -200,6 +213,8 @@ wk5.RDW <- ggplot(Week5, aes(x=Treatment, y=RDW, fill=Treatment)) +
 wk5.RDW
 ```
 
+
+
 ```{r wk5.MPV}
 wk5.MPV <- ggplot(Week5, aes(x=Treatment, y=MPV, fill=Treatment)) +
   stat_summary(fun.data=mean_sdl, fun.args=list(mult=1), binwidth = 0.1, geom="errorbar", color="black", size=1.2, width=0.1) +
@@ -215,6 +230,8 @@ wk5.MPV <- ggplot(Week5, aes(x=Treatment, y=MPV, fill=Treatment)) +
 wk5.MPV
 ```
 
+
+
 ```{r wk5.Percent.Lym}
 wk5.Percent.Lym <- ggplot(Week5, aes(x=Treatment, y=Percent.Lym, fill=Treatment)) +
   stat_summary(fun.data=mean_sdl, fun.args=list(mult=1), binwidth = 1, geom="errorbar", color="black", size=1.2, width=0.1) +
@@ -228,6 +245,8 @@ wk5.Percent.Lym <- ggplot(Week5, aes(x=Treatment, y=Percent.Lym, fill=Treatment)
   stat_compare_means(method="t.test", hjust=-0.3, vjust=2, size=5) 
 wk5.Percent.Lym
 ```
+
+
 
 ```{r wk5.Percent.Mon}
 wk5.Percent.Mon <- ggplot(Week5, aes(x=Treatment, y=Percent.Mon, fill=Treatment)) +
@@ -243,6 +262,8 @@ wk5.Percent.Mon <- ggplot(Week5, aes(x=Treatment, y=Percent.Mon, fill=Treatment)
 wk5.Percent.Mon
 ```
 
+
+
 ```{r wk5.Percent.Gra}
 wk5.Percent.Gra <- ggplot(Week5, aes(x=Treatment, y=Percent.Gra, fill=Treatment)) +
   stat_summary(fun.data=mean_sdl, fun.args=list(mult=1), binwidth = .1, geom="errorbar", color="black", size=1.2, width=0.1) +
@@ -256,6 +277,9 @@ wk5.Percent.Gra <- ggplot(Week5, aes(x=Treatment, y=Percent.Gra, fill=Treatment)
   stat_compare_means(method="t.test", hjust=-0.3, vjust=2, size=5) 
 wk5.Percent.Gra
 ```
+
+
+
 ```{r wk5.Number.Lym}
 wk5.Number.Lym <- ggplot(Week5, aes(x=Treatment, y=Number.Lym, fill=Treatment)) +
   stat_summary(fun.data=mean_sdl, fun.args=list(mult=1), binwidth = .1, geom="errorbar", color="black", size=1.2, width=0.1) +
@@ -271,6 +295,8 @@ wk5.Number.Lym <- ggplot(Week5, aes(x=Treatment, y=Number.Lym, fill=Treatment)) 
 wk5.Number.Lym
 ```
 
+
+
 ```{r wk5.Number.Mon}
 wk5.Number.Mon <- ggplot(Week5, aes(x=Treatment, y=Number.Mon, fill=Treatment)) +
   stat_summary(fun.data=mean_sdl, fun.args=list(mult=1), binwidth = .1, geom="errorbar", color="black", size=1.2, width=0.1) +
@@ -285,6 +311,8 @@ wk5.Number.Mon <- ggplot(Week5, aes(x=Treatment, y=Number.Mon, fill=Treatment)) 
   theme(legend.position="none")
 wk5.Number.Mon
 ```
+
+
 
 ```{r wk5.Number.Gra}
 wk5.Number.Gra <- ggplot(Week5, aes(x=Treatment, y=Number.Gra, fill=Treatment)) +

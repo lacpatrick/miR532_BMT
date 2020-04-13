@@ -53,8 +53,11 @@ dim(Week5)
 
 Let's make a dot plot for WBC count:
 ``` {r WBC}
-WBC <- ggplot(Data.copy, aes(x=Treatment, y=WBC)) +
-  geom_dotplot(binaxis="y", stackdir="center", stackratio=0.6, dotsize=0.5) + 
-  stat_summary(fun.data=mean_sdl, fun.args=list(mult=1),geom="pointrange", color="red", width=5)
+WBC <- ggplot(Week5, aes(x=Treatment, y=WBC)) +
+  geom_dotplot(binaxis="y", stackdir="center", stackratio=1.5, dotsize=0.6) + 
+  stat_summary(fun.data=mean_sdl, fun.args=list(mult=1),geom="pointrange", color="red", width=5) +
+  ylim(0,12) +
+  labs(title = "WBC", x = "Treatment", y = "WBC(10"^"3"*"/"~mu~"L)")
+
 WBC
 ```

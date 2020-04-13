@@ -49,7 +49,7 @@ What are the dimensions of our data?
 ## [1] 368  21
 ```
 
-##Peripheral bleeds 5 weeks post-transplant:
+## Peripheral bleeds 5 weeks post-transplant:
 Next we will filter for CBC data at 5 weeks post-transplant
 
 
@@ -59,6 +59,17 @@ Let's check the dimensions of our subsetted data:
 ## [1] 48 21
 ```
 
-Let's make a dot plot for WBC count:
+Let's make dotplots for our CBC counts:
 
-![](miR532_BMT_peripheralblood_files/figure-html/WBC-1.png)<!-- -->
+![](miR532_BMT_peripheralblood_files/figure-html/wk5.WBC-1.png)<!-- -->
+
+
+![](miR532_BMT_peripheralblood_files/figure-html/wk5.RBC-1.png)<!-- -->
+
+
+![](miR532_BMT_peripheralblood_files/figure-html/wk5.HGB-1.png)<!-- -->
+
+
+![](miR532_BMT_peripheralblood_files/figure-html/wk5.HCT-1.png)<!-- -->
+
+![](miR532_BMT_peripheralblood_files/figure-html/wk5.PLT-1.png)<!-- -->

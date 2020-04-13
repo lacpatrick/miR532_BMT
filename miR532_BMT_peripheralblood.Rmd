@@ -8,7 +8,7 @@ output:
 ---
 
 ```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
+knitr::opts_chunk$set(echo = F, message = F, warning = F)
 ```
 
 ``` {r library, message = F}
@@ -42,6 +42,7 @@ What are the dimensions of our data?
 dim(Data.copy)
 ```
 
+##Peripheral bleeds 5 weeks post-transplant:
 Next we will filter for CBC data at 5 weeks post-transplant
 ``` {r filter.5weeks}
 Week5 <- subset(Data.copy, Weeks.post.transplant == 5)
@@ -53,6 +54,7 @@ dim(Week5)
 ```
 
 Let's make a dot plot for WBC count:
+
 ``` {r WBC}
 WBC <- ggplot(Week5, aes(x=Treatment, y=WBC, fill=Treatment)) +
   #Add standard deviation bars

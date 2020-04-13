@@ -58,11 +58,11 @@ Let's make dotplots for our CBC counts:
 ``` {r wk5.WBC}
 wk5.WBC <- ggplot(Week5, aes(x=Treatment, y=WBC, fill=Treatment)) +
   #Add standard deviation bars
-  stat_summary(fun.data=mean_sdl, fun.args=list(mult=1), binwidth = 0.1, geom="errorbar", color="red", size=1.2, width=0.1) +
+  stat_summary(fun.data=mean_sdl, fun.args=list(mult=1), binwidth = 0.1, geom="errorbar", color="black", size=1.2, width=0.1) +
   #Add mean bar
-  stat_summary(fun.y=mean, geom="crossbar", color="red", size=0.6, width=0.2) +
+  stat_summary(fun.y=mean, geom="crossbar", color="black", size=0.6, width=0.2) +
   #Add dot-plot
-  geom_dotplot(binaxis="y", binwidth = 0.1, stackdir="center", stackratio=3, dotsize=3) + 
+  geom_dotplot(binaxis="y", binwidth = 0.1, stackdir="center", stackratio=2, dotsize=3) + 
   #Set y-axis scale
   ylim(0, 12) +
   #Change to minimalistic theme
@@ -80,9 +80,9 @@ wk5.WBC
 
 ```{r wk5.RBC}
 wk5.RBC <- ggplot(Week5, aes(x=Treatment, y=RBC, fill=Treatment)) +
-  stat_summary(fun.data=mean_sdl, fun.args=list(mult=1), binwidth = 0.1, geom="errorbar", color="red", size=1.2, width=0.1) +
-  stat_summary(fun.y=mean, geom="crossbar", color="red", size=0.6, width=0.2) +
-  geom_dotplot(binaxis="y", binwidth = 0.1, stackdir="center", stackratio=3, dotsize=3.5) + 
+  stat_summary(fun.data=mean_sdl, fun.args=list(mult=1), binwidth = 0.1, geom="errorbar", color="black", size=1.2, width=0.1) +
+  stat_summary(fun.y=mean, geom="crossbar", color="black", size=0.6, width=0.2) +
+  geom_dotplot(binaxis="y", binwidth = 0.1, stackdir="center", stackratio=2, dotsize=3.5) + 
   ylim(0, 15) +
   theme_minimal() +
   labs(title = "Red blood cells", x = "Treatment", y = "RBC (10"^"6"*"/"~mu~"L)") +
@@ -96,9 +96,9 @@ wk5.RBC
 
 ```{r wk5.HGB}
 wk5.HGB <- ggplot(Week5, aes(x=Treatment, y=HGB, fill=Treatment)) +
-  stat_summary(fun.data=mean_sdl, fun.args=list(mult=1), binwidth = 0.1, geom="errorbar", color="red", size=1.2, width=0.1) +
-  stat_summary(fun.y=mean, geom="crossbar", color="red", size=0.6, width=0.2) +
-  geom_dotplot(binaxis="y", binwidth = 0.1, stackdir="center", stackratio=3, dotsize=5) + 
+  stat_summary(fun.data=mean_sdl, fun.args=list(mult=1), binwidth = 0.1, geom="errorbar", color="black", size=1.2, width=0.1) +
+  stat_summary(fun.y=mean, geom="crossbar", color="black", size=0.6, width=0.2) +
+  geom_dotplot(binaxis="y", binwidth = 0.1, stackdir="center", stackratio=3.5, dotsize=5) + 
   ylim(0, 20) +
   theme_minimal() +
   labs(title = "Hemoglobin", x = "Treatment", y = "HGB (g/dL)") +
@@ -112,10 +112,10 @@ wk5.HGB
 
 ```{r wk5.HCT}
 wk5.HCT <- ggplot(Week5, aes(x=Treatment, y=HCT, fill=Treatment)) +
-  stat_summary(fun.data=mean_sdl, fun.args=list(mult=1), binwidth = 1, geom="errorbar", color="red", size=1.2, width=0.1) +
-  stat_summary(fun.y=mean, geom="crossbar", color="red", size=0.6, width=0.2) +
-  geom_dotplot(binaxis="y", binwidth = 1, stackdir="center", stackratio=3, dotsize=2.5) + 
-  ylim(0, 100) +
+  stat_summary(fun.data=mean_sdl, fun.args=list(mult=1), binwidth = 1, geom="errorbar", color="black", size=1.2, width=0.1) +
+  stat_summary(fun.y=mean, geom="crossbar", color="black", size=0.6, width=0.2) +
+  geom_dotplot(binaxis="y", binwidth = 1, stackdir="center", stackratio=1.8, dotsize=2) + 
+  ylim(0, 80) +
   theme_minimal() +
   labs(title = "Hematocrit", x = "Treatment", y = "HCT (%)") +
   theme(plot.title = element_text(hjust=0.5), text=element_text(size=18)) +
@@ -127,10 +127,10 @@ wk5.HCT
 
 ```{r wk5.PLT}
 wk5.PLT <- ggplot(Week5, aes(x=Treatment, y=PLT, fill=Treatment)) +
-  stat_summary(fun.data=mean_sdl, fun.args=list(mult=1), binwidth = 10, geom="errorbar", color="red", size=1.2, width=0.1) +
-  stat_summary(fun.y=mean, geom="crossbar", color="red", size=0.6, width=0.2) +
-  geom_dotplot(binaxis="y", binwidth = 10, stackdir="center", stackratio=3, dotsize=3.5) + 
-  ylim(0, 1500) +
+  stat_summary(fun.data=mean_sdl, fun.args=list(mult=1), binwidth = 3, geom="errorbar", color="black", size=1.2, width=0.1) +
+  stat_summary(fun.y=mean, geom="crossbar", color="black", size=0.6, width=0.2) +
+  geom_dotplot(binaxis="y", binwidth = 3, stackdir="center", stackratio=5, dotsize=10) + 
+  ylim(0, 1250) +
   theme_minimal() +
   labs(title = "Platelets", x = "Treatment", y = "PLT (10"^"3"*"/"~mu~"L)") +
   theme(plot.title = element_text(hjust=0.5), text=element_text(size=18)) +
@@ -138,4 +138,79 @@ wk5.PLT <- ggplot(Week5, aes(x=Treatment, y=PLT, fill=Treatment)) +
   stat_compare_means(method="t.test", hjust=-0.5, vjust=2, size=5) +
   theme(legend.position="none")
 wk5.PLT
+```
+
+```{r wk5.MCV}
+wk5.MCV <- ggplot(Week5, aes(x=Treatment, y=MCV, fill=Treatment)) +
+  stat_summary(fun.data=mean_sdl, fun.args=list(mult=1), binwidth = 1, geom="errorbar", color="black", size=1.2, width=0.1) +
+  stat_summary(fun.y=mean, geom="crossbar", color="black", size=0.6, width=0.2) +
+  geom_dotplot(binaxis="y", binwidth = 1, stackdir="center", stackratio=1.5, dotsize=1.5) + 
+  ylim(0, 60) +
+  theme_minimal() +
+  labs(title = "Mean corpuscular volume", x = "Treatment", y = "MCV ("~mu~"m"^"3"*")") +
+  theme(plot.title = element_text(hjust=0.5), text=element_text(size=18)) +
+  scale_fill_discrete(name="Treatment", labels = c("control (n=20)", "miR-532 (n=28)")) +
+  stat_compare_means(method="t.test", hjust=-0.6, vjust=2, size=5) +
+  theme(legend.position="none")
+wk5.MCV
+```
+
+```{r wk5.MCH}
+wk5.MCH <- ggplot(Week5, aes(x=Treatment, y=MCH, fill=Treatment)) +
+  stat_summary(fun.data=mean_sdl, fun.args=list(mult=1), binwidth = 0.1, geom="errorbar", color="black", size=1.2, width=0.1) +
+  stat_summary(fun.y=mean, geom="crossbar", color="black", size=0.6, width=0.2) +
+  geom_dotplot(binaxis="y", binwidth = 0.1, stackdir="center", stackratio=2.5, dotsize=5) + 
+  ylim(0, 20) +
+  theme_minimal() +
+  labs(title = "Mean corpuscular hemoglobin", x = "Treatment", y = "MCH (pg)") +
+  theme(plot.title = element_text(hjust=0.5), text=element_text(size=18)) +
+  scale_fill_discrete(name="Treatment", labels = c("control (n=20)", "miR-532 (n=28)")) +
+  stat_compare_means(method="t.test", hjust=-0.6, vjust=2, size=5) +
+  theme(legend.position="none")
+wk5.MCH
+```
+
+```{r wk5.MCHC}
+wk5.MCHC <- ggplot(Week5, aes(x=Treatment, y=MCHC, fill=Treatment)) +
+  stat_summary(fun.data=mean_sdl, fun.args=list(mult=1), binwidth = 0.1, geom="errorbar", color="black", size=1.2, width=0.1) +
+  stat_summary(fun.y=mean, geom="crossbar", color="black", size=0.6, width=0.2) +
+  geom_dotplot(binaxis="y", binwidth = 0.1, stackdir="center", stackratio=3, dotsize=10) + 
+  ylim(0, 40) +
+  theme_minimal() +
+  labs(title = "Mean corpuscular hemoglobin concentration", x = "Treatment", y = "MCHC (g/dl)") +
+  theme(plot.title = element_text(hjust=0.5), text=element_text(size=18)) +
+  scale_fill_discrete(name="Treatment", labels = c("control (n=20)", "miR-532 (n=28)")) +
+  stat_compare_means(method="t.test", hjust=-0.6, vjust=2, size=5) +
+  theme(legend.position="none")
+wk5.MCHC
+```
+
+```{r wk5.RDW}
+wk5.RDW <- ggplot(Week5, aes(x=Treatment, y=RDW, fill=Treatment)) +
+  stat_summary(fun.data=mean_sdl, fun.args=list(mult=1), binwidth = 0.1, geom="errorbar", color="black", size=1.2, width=0.1) +
+  stat_summary(fun.y=mean, geom="crossbar", color="black", size=0.6, width=0.2) +
+  geom_dotplot(binaxis="y", binwidth = 0.1, stackdir="center", stackratio=2, dotsize=5) + 
+  ylim(0, 20) +
+  theme_minimal() +
+  labs(title = "RBC distribution width", x = "Treatment", y = "RDW (%)") +
+  theme(plot.title = element_text(hjust=0.5), text=element_text(size=18)) +
+  scale_fill_discrete(name="Treatment", labels = c("control (n=20)", "miR-532 (n=28)")) +
+  stat_compare_means(method="t.test", hjust=-0.6, vjust=2, size=5) +
+  theme(legend.position="none")
+wk5.RDW
+```
+
+```{r wk5.MPV}
+wk5.MPV <- ggplot(Week5, aes(x=Treatment, y=MPV, fill=Treatment)) +
+  stat_summary(fun.data=mean_sdl, fun.args=list(mult=1), binwidth = 0.1, geom="errorbar", color="black", size=1.2, width=0.1) +
+  stat_summary(fun.y=mean, geom="crossbar", color="black", size=0.6, width=0.2) +
+  geom_dotplot(binaxis="y", binwidth = 0.1, stackdir="center", stackratio=2, dotsize=2.5) + 
+  ylim(0, 10) +
+  theme_minimal() +
+  labs(title = "Mean platelet volume", x = "Treatment", y = "MPV ("~mu~"m"^"3"*")") +
+  theme(plot.title = element_text(hjust=0.5), text=element_text(size=18)) +
+  scale_fill_discrete(name="Treatment", labels = c("control (n=20)", "miR-532 (n=28)")) +
+  stat_compare_means(method="t.test", hjust=-0.6, vjust=2, size=5) +
+  theme(legend.position="none")
+wk5.MPV
 ```

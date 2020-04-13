@@ -14,6 +14,7 @@ knitr::opts_chunk$set(echo = TRUE)
 ``` {r library, message = F}
 library(tidyverse)
 library(dplyr)
+library(ggplot2)
 ```
 
 Let's begin by importing our data:
@@ -27,5 +28,33 @@ PL_data <- read.csv("F:/Git/PLac Analyses/miR-532 project/miR532_BMT/Data/200412
 
 Next lets attach the different peripheral blood data together:
 ``` {r combine.data}
-PB_data <- rbind(JL_data, MB_data, PL_data)
+Total_PB_data <- rbind(JL_data, MB_data, PL_data)
+head(Total_PB_data)
+```
+
+We will make a copy of the total data for manipulation:
+``` {r data.copy}
+Data.copy <- Total_PB_data
+```
+What are the dimensions of our data?
+```{r dim.data}
+dim(Data.copy)
+```
+
+Next we will filter for CBC data at 5 weeks post-transplant
+``` {r filter.5weeks}
+Week5 <- subset(Data.copy, Weeks.post.transplant == 5)
+```
+
+Let's check the dimensions of our subsetted data:
+```{r dim.week5}
+dim(Week5)
+```
+
+Let's make a dot plot for WBC count:
+``` {r WBC}
+WBC <- ggplot(Data.copy, aes(x=Treatment, y=WBC)) +
+  geom_dotplot(binaxis="y", stackdir="center", stackratio=0.6, dotsize=0.5) + 
+  stat_summary(fun.data=mean_sdl, fun.args=list(mult=1),geom="pointrange", color="red", width=5)
+WBC
 ```

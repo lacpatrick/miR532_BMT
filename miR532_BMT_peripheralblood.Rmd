@@ -74,7 +74,8 @@ wk5.WBC <- ggplot(Week5, aes(x=Treatment, y=WBC, fill=Treatment)) +
   scale_fill_discrete(name="Treatment", labels = c("control (n=20)", "miR-532 (n=28)")) +
   #perform t-test
   stat_compare_means(method="t.test", hjust=0, vjust=0.2, size=4) +
-  theme(legend.position="top", legend.title=element_text(size=7), legend.text = element_text(size=6.5))
+  theme(legend.position="top", legend.title=element_text(size=15), legend.text = element_text(size=15)) +
+  theme(legend.position="none")
 wk5.WBC
 ```
 
@@ -106,6 +107,7 @@ wk5.HGB <- ggplot(Week5, aes(x=Treatment, y=HGB, fill=Treatment)) +
   theme(plot.title = element_text(hjust=0.5), text=element_text(size=11)) +
   scale_fill_discrete(name="Treatment", labels = c("control (n=20)", "miR-532 (n=28)")) +
   stat_compare_means(method="t.test", hjust=-0.07, vjust=0.2, size=4) +
+  theme(legend.position="top", legend.title=element_text(size=15), legend.text = element_text(size=15)) +
   theme(legend.position="none")
 wk5.HGB
 ```
@@ -122,6 +124,7 @@ wk5.HCT <- ggplot(Week5, aes(x=Treatment, y=HCT, fill=Treatment)) +
   theme(plot.title = element_text(hjust=0.5), text=element_text(size=11)) +
   scale_fill_discrete(name="Treatment", labels = c("control (n=20)", "miR-532 (n=28)")) +
   stat_compare_means(method="t.test", hjust=0, vjust=0.2, size=4) +
+  theme(legend.position="top", legend.title=element_text(size=15), legend.text = element_text(size=15)) +
   theme(legend.position="none")
 wk5.HCT
 ```
@@ -188,20 +191,6 @@ wk5.MCHC <- ggplot(Week5, aes(x=Treatment, y=MCHC, fill=Treatment)) +
   stat_compare_means(method="t.test", hjust=-0.05, vjust=0.2, size=4) +
   theme(legend.position="none")
 wk5.MCHC
-```
-
-``` {r wk5.MCHC.legend, fig.width=4.5,fig.height=3.2}
-wk5.MCHC.legend <- ggplot(Week5, aes(x=Treatment, y=MCHC, fill=Treatment)) +
-  stat_summary(fun.data=mean_sdl, fun.args=list(mult=1), binwidth = 0.1, geom="errorbar", color="black", size=1.2, width=0.1) +
-  stat_summary(fun.y=mean, geom="crossbar", color="black", size=0.6, width=0.2) +
-  geom_dotplot(binaxis="y", binwidth = 0.1, stackdir="center", stackratio=3, dotsize=10) + 
-  ylim(0, 40) +
-  labs(title = "Mean corpuscular \n hemoglobin concentration", x = "Treatment", y = "MCHC (g/dl)") +
-  theme(plot.title = element_text(hjust=0.5), text=element_text(size=11)) +
-  scale_fill_discrete(name="Treatment", labels = c("control (n=20)", "miR-532 (n=28)")) +
-  stat_compare_means(method="t.test", hjust=-0.05, vjust=0.2, size=4) +
-  theme(legend.position="right")
-wk5.MCHC.legend
 ```
 
 
@@ -336,13 +325,13 @@ wk5.Number.Gra
 ```{r arrange.plots, fig.width=10, fig.height=11}
 ggarrange(wk5.WBC, wk5.RBC, wk5.PLT, wk5.Number.Lym, wk5.Number.Mon, wk5.Number.Gra,
           labels = "auto",
-          ncol=3, nrow=2)
+          ncol=3, nrow=2, common.legend = T, legend="bottom")
 ```     
 
 ```{r arrange.plots, fig.width=10, fig.height=11}
-ggarrange(wk5.HGB, wk5.HCT, wk5.MCV, wk5.MCH, wk5.RDW, wk5.MPV, wk5.MCHC.legend,
+ggarrange(wk5.HCT, wk5.MPV, wk5.HGB, wk5.RDW, wk5.MCV, wk5.MCH, wk5.MCHC,
          labels = "auto",
-          ncol=3, nrow=3)
+          ncol=3, nrow=3, common.legend = T, legend="bottom")
 ```    
 
   

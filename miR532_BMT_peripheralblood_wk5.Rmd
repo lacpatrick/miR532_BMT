@@ -330,6 +330,7 @@ wk5.fig1 <- ggarrange(wk5.WBC, wk5.RBC, wk5.PLT, wk5.Number.Lym, wk5.Number.Mon,
 wk5.fig1
 ```     
 
+
 #### Figure 2
 ```{r figure2, fig.width=10, fig.height=11}
 wk5.fig2 <- ggarrange(wk5.HCT, wk5.MPV, wk5.HGB, wk5.RDW, wk5.MCV, wk5.MCH, wk5.MCHC,
@@ -337,6 +338,12 @@ wk5.fig2 <- ggarrange(wk5.HCT, wk5.MPV, wk5.HGB, wk5.RDW, wk5.MCV, wk5.MCH, wk5.
           ncol=3, nrow=3, common.legend = T, legend="bottom")
 wk5.fig2
 ```    
+
+
+### Notes
+The four miR-532 mice with high granulocytes had lower peripheral blood engraftment (37-45% GFP+)
+Two of these four mice had low lymphocyte and monocyte counts.
+The other two mice had relatively high monocyte counts, but lower than average lymphocyte counts.
 
   
           

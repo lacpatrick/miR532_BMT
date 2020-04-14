@@ -122,3 +122,14 @@ Let's make dotplots for our CBC counts:
 
 
 ![](miR532_BMT_peripheralblood_files/figure-html/wk5.Number.Gra-1.png)<!-- -->
+
+### Now let's arrange the plots:
+#### Figure 1
+![](miR532_BMT_peripheralblood_files/figure-html/figure1-1.png)<!-- -->
+
+#### Figure 2
+![](miR532_BMT_peripheralblood_files/figure-html/figure2-1.png)<!-- -->
+
+  
+          
+

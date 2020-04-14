@@ -322,16 +322,20 @@ wk5.Number.Gra
 ```
 
 ### Now let's arrange the plots:
-```{r arrange.plots, fig.width=10, fig.height=11}
-ggarrange(wk5.WBC, wk5.RBC, wk5.PLT, wk5.Number.Lym, wk5.Number.Mon, wk5.Number.Gra,
+#### Figure 1
+```{r figure1, fig.width=10, fig.height=11}
+wk5.fig1 <- ggarrange(wk5.WBC, wk5.RBC, wk5.PLT, wk5.Number.Lym, wk5.Number.Mon, wk5.Number.Gra,
           labels = "auto",
           ncol=3, nrow=2, common.legend = T, legend="bottom")
+wk5.fig1
 ```     
 
-```{r arrange.plots, fig.width=10, fig.height=11}
-ggarrange(wk5.HCT, wk5.MPV, wk5.HGB, wk5.RDW, wk5.MCV, wk5.MCH, wk5.MCHC,
+#### Figure 2
+```{r figure2, fig.width=10, fig.height=11}
+wk5.fig2 <- ggarrange(wk5.HCT, wk5.MPV, wk5.HGB, wk5.RDW, wk5.MCV, wk5.MCH, wk5.MCHC,
          labels = "auto",
           ncol=3, nrow=3, common.legend = T, legend="bottom")
+wk5.fig2
 ```    
 
   

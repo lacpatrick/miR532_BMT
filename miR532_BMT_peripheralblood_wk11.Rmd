@@ -22,7 +22,7 @@ library(gridExtra)
 
 Let's begin by importing our data:
 
-``` {r import.data}
+``` {r import.data, echo=T}
 metadata <- read.csv("F:/Git/PLac Analyses/miR-532 project/miR532_BMT/Data/200412_MetaData.csv")
 JL_data <- read.csv("F:/Git/PLac Analyses/miR-532 project/miR532_BMT/Data/200412_JL_Data.csv")
 MB_data <- read.csv("F:/Git/PLac Analyses/miR-532 project/miR532_BMT/Data/200412_MB_Data.csv")

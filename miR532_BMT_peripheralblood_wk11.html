@@ -186,6 +186,10 @@ summary {
 
 
 <p>Let’s begin by importing our data:</p>
+<pre class="r"><code>metadata &lt;- read.csv(&quot;F:/Git/PLac Analyses/miR-532 project/miR532_BMT/Data/200412_MetaData.csv&quot;)
+JL_data &lt;- read.csv(&quot;F:/Git/PLac Analyses/miR-532 project/miR532_BMT/Data/200412_JL_Data.csv&quot;)
+MB_data &lt;- read.csv(&quot;F:/Git/PLac Analyses/miR-532 project/miR532_BMT/Data/200412_MB_Data.csv&quot;)
+PL_data &lt;- read.csv(&quot;F:/Git/PLac Analyses/miR-532 project/miR532_BMT/Data/200412_PL_Data.csv&quot;)</code></pre>
 <p>Next lets attach the different peripheral blood data together:</p>
 <pre><code>##   ï..Sample          Original.label Treatment Weeks.post.transplant WBC  RBC
 ## 1     MIG.1 BMT1.MIG (NEP cage 1/2)   control                     5 5.2 9.57

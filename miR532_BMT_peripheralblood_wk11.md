@@ -14,6 +14,12 @@ output:
 Let's begin by importing our data:
 
 
+```r
+metadata <- read.csv("F:/Git/PLac Analyses/miR-532 project/miR532_BMT/Data/200412_MetaData.csv")
+JL_data <- read.csv("F:/Git/PLac Analyses/miR-532 project/miR532_BMT/Data/200412_JL_Data.csv")
+MB_data <- read.csv("F:/Git/PLac Analyses/miR-532 project/miR532_BMT/Data/200412_MB_Data.csv")
+PL_data <- read.csv("F:/Git/PLac Analyses/miR-532 project/miR532_BMT/Data/200412_PL_Data.csv")
+```
 
 Next lets attach the different peripheral blood data together:
 

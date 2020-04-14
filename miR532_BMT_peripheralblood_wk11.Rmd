@@ -60,7 +60,7 @@ dim(Week11)
 
 Let's make dotplots for our CBC counts:
 
-``` {r wk11.WBC, fig.width=3,fig.height=3.5}
+``` {r wk11.WBC, fig.width=3,fig.height=3}
 wk11.WBC <- ggplot(Week11, aes(x=Treatment, y=WBC, fill=Treatment)) +
   #Add standard deviation bars
   stat_summary(fun.data=mean_sdl, fun.args=list(mult=1), binwidth = 0.1, geom="errorbar", color="black", size=1.2, width=0.1) +

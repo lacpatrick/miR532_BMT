@@ -14,6 +14,12 @@ output:
 Let's begin by importing our data:
 
 
+```r
+metadata <- read.csv("F:/Git/PLac Analyses/miR-532 project/miR532_BMT/Data/200412_MetaData.csv")
+JL_data <- read.csv("F:/Git/PLac Analyses/miR-532 project/miR532_BMT/Data/200412_JL_Data.csv")
+MB_data <- read.csv("F:/Git/PLac Analyses/miR-532 project/miR532_BMT/Data/200412_MB_Data.csv")
+PL_data <- read.csv("F:/Git/PLac Analyses/miR-532 project/miR532_BMT/Data/200412_PL_Data.csv")
+```
 
 Next lets attach the different peripheral blood data together:
 
@@ -137,6 +143,11 @@ The four miR-532 mice with high granulocytes had lower peripheral blood engraftm
 Two of these four mice had low lymphocyte and monocyte counts.
 The other two mice had relatively high monocyte counts, but lower than average lymphocyte counts.
 
-  
+ID, GFP+ %, Lym, Mon, Gra
+miR532-29, 43.2,  1.8, 0.9, 7.5
+miR532-14, 45.5, 1.1, 0.3, 5.6
+miR532-30, 37.4, 2.0, 0.8, 4.3
+miR532-8, 44.3, 0.9, 0.2, 4.0
           
-
+#### Making a figure for just WBC, RBC, and platelets
+![](miR532_BMT_peripheralblood_wk5_files/figure-html/figure3-1.png)<!-- -->

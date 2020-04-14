@@ -149,5 +149,3 @@ miR532-14, 45.5, 1.1, 0.3, 5.6
 miR532-30, 37.4, 2.0, 0.8, 4.3  
 miR532-8, 44.3, 0.9, 0.2, 4.0  
           
-#### Making a figure for just WBC, RBC, and platelets
-![](miR532_BMT_peripheralblood_wk5_files/figure-html/figure3-1.png)<!-- -->

@@ -153,6 +153,20 @@ Let's make dotplots for our CBC counts:
 #### Figure 2
 ![](miR532_BMT_peripheralblood_wk11_files/figure-html/figure2-1.png)<!-- -->
 
-  
-          
+### Notes
+The four miR-532 mice with high granulocytes and lower peripheral blood engraftment (37-45% GFP+) at week 5:
+
+At week5
+ID, GFP+ %, Lym, Mon, Gra
+miR532-29, 43.2,  1.8, 0.9, 7.5
+miR532-14, 45.5, 1.1, 0.3, 5.6
+miR532-30, 37.4, 2.0, 0.8, 4.3
+miR532-8, 44.3, 0.9, 0.2, 4.0
+
+At week11
+     ID, GFP+ %, Lym, Mon, Gra
+miR532-29, 
+miR532-14, 43.1, 3.0, 0.5, 5.8
+miR532-30, 
+miR532-8, 55.0, 2.3, 0.4, 2.6   
 

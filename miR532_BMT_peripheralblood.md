@@ -147,37 +147,44 @@ miR532-14, 43.1, 3.0, 0.5, 5.8
 miR532-30,  
 miR532-8, 55.0, 2.3, 0.4, 2.6   
 
-## Peripheral bleeds 11 weeks post-transplant:
+
+## Now lets separate the data based on the transplanter:
+
+We begin by joining the metadata to the week 5 CBC data
+
+
+
+# Peripheral bleeds 11 weeks post-transplant:
 Next we will filter for CBC data at 11 weeks post-transplant
 
 ```
-##    ï..Sample          Original.label Treatment Weeks.post.transplant  WBC   RBC
-## 28     MIG.1 BMT1.MIG (NEP cage 1/2)   control                    10  5.0 10.84
-## 29     MIG.2 BMT1.MIG (REP cage 1/2)   control                    10 11.1 10.81
-## 30     MIG.3 BMT1.MIG (BEP cage 2/2)   control                    10  3.4 11.07
-## 31     MIG.4 BMT1.MIG (REP cage 2/2)   control                    10  3.8 11.22
-## 32     MIG.5 BMT2.MIG (cage 2/2 BEP)   control                    11  4.5 10.77
-## 33     MIG.6 BMT2.MIG (cage 2/2 LEP)   control                    11  6.3 10.13
-##     HGB  HCT MCV  MCH MCHC PLT MPV  RDW Percent.Lym Percent.Mon Percent.Gra
-## 28 16.4 50.4  46 15.1 32.5 614 6.4 15.3          NA          NA          NA
-## 29 15.5 47.7  44 14.4 32.6 567 6.7 15.9          NA          NA          NA
-## 30 16.0 48.0  43 14.5 33.4 720 6.0 14.6          NA          NA          NA
-## 31 16.0 49.3  44 14.3 32.5 790 6.4 15.5          NA          NA          NA
-## 32 14.8 47.0  44 13.8 31.5 756 6.6 15.9          NA          NA          NA
-## 33 14.4 44.3  44 14.2 32.6 799 6.1 15.4          NA          NA          NA
-##    Number.Lym Number.Mon Number.Gra  GFP
-## 28        3.1        0.4        1.5 86.7
-## 29        4.3        0.7        6.1 87.5
-## 30        2.2        0.2        1.0 88.9
-## 31        2.4        0.2        1.2 84.8
-## 32        0.5        0.3        3.7 73.6
-## 33        2.8        0.5        3.0 66.5
+##     ï..Sample          Original.label Treatment Weeks.post.transplant  WBC
+## 28      MIG.1 BMT1.MIG (NEP cage 1/2)   control                    10  5.0
+## 29      MIG.2 BMT1.MIG (REP cage 1/2)   control                    10 11.1
+## 30      MIG.3 BMT1.MIG (BEP cage 2/2)   control                    10  3.4
+## 31      MIG.4 BMT1.MIG (REP cage 2/2)   control                    10  3.8
+## 234    MIG.12        MB_miR BMT_MIG_1   control                    10  4.3
+## 235    MIG.13        MB_miR BMT_MIG_2   control                    10  6.5
+##       RBC  HGB  HCT MCV  MCH MCHC PLT MPV  RDW Percent.Lym Percent.Mon
+## 28  10.84 16.4 50.4  46 15.1 32.5 614 6.4 15.3          NA          NA
+## 29  10.81 15.5 47.7  44 14.4 32.6 567 6.7 15.9          NA          NA
+## 30  11.07 16.0 48.0  43 14.5 33.4 720 6.0 14.6          NA          NA
+## 31  11.22 16.0 49.3  44 14.3 32.5 790 6.4 15.5          NA          NA
+## 234 11.80 15.9 53.3  45 13.4 29.7 661 6.4 14.9        67.3         9.6
+## 235 12.34 16.4 55.3  45 13.3 29.6 581 6.7 14.6        66.0         9.2
+##     Percent.Gra Number.Lym Number.Mon Number.Gra  GFP
+## 28           NA        3.1        0.4        1.5 86.7
+## 29           NA        4.3        0.7        6.1 87.5
+## 30           NA        2.2        0.2        1.0 88.9
+## 31           NA        2.4        0.2        1.2 84.8
+## 234        23.1        2.9        0.4        1.0   NA
+## 235        24.8        4.3        0.6        1.6   NA
 ```
 
 Let's check the dimensions of our subsetted data:
 
 ```
-## [1] 48 21
+## [1] 58 21
 ```
 
 Let's make dotplots for our CBC counts:
@@ -250,3 +257,4 @@ Let's make dotplots for our CBC counts:
 
 #### Figure 4
 ![](miR532_BMT_peripheralblood_files/figure-html/wk11.fig2-1.png)<!-- -->
+

@@ -1,5 +1,5 @@
 ---
-title: "miR532_BMT_peripheralblood_wk5"
+title: "miR532_BMT_peripheralblood_wk11"
 author: "Patrick Lac"
 date: "April 24, 2020"
 output: 
@@ -44,10 +44,13 @@ What are the dimensions of our data?
 dim(Data.copy)
 ```
 
-## Peripheral bleeds 5 weeks post-transplant:
-Next we will filter for CBC data at 5 weeks post-transplant
-``` {r filter.5weeks}
-Data.sub <- subset(Data.copy, Weeks.post.transplant == 5)
+# Peripheral bleeds 11 weeks post-transplant:
+Next we will filter for CBC data at 11 weeks post-transplant
+``` {r filter.11weeks}
+week10data <- subset(Data.copy, Weeks.post.transplant == 10)
+week11data <- subset(Data.copy, Weeks.post.transplant == 11)
+Data.sub <- rbind(week10data, week11data)
+head(Data.sub)
 ```
 
 Let's check the dimensions of our subsetted data:
